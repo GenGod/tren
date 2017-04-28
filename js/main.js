@@ -19,12 +19,13 @@ require(['views/Comments'], function (AppView) {
         success: function (data) {
             for (var a in data) {
                 var dateStamp = getDateStamp(+data[a].time);
+                var dateStamp = moment(+data.time).fromNow();
                 //console.log(dateStamp);
                 var i = new Comment({
                     userName: data[a].userName,
                     theme: data[a].theme,
                     comment: data[a].comment,
-                    dateStamp: dateStamp
+                    time: dateStamp
                 });
                 //console.log(i);
                 collection.add(i);
