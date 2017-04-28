@@ -1,4 +1,4 @@
-define(['backbone', 'jquery'], function(backbone, $) {
+define(['backbone', 'jquery'], function(Backbone, $) {
     var CommentView = Backbone.View.extend({
         el: '#comments',
         initialize: function() {
@@ -47,7 +47,7 @@ define(['backbone', 'jquery'], function(backbone, $) {
                         '<hr>' +
                         '</div>';
                     $("#comments").prepend(text);
-                },
+                }
             });
         }
     });

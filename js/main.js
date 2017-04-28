@@ -1,11 +1,10 @@
 require.config({
-    baseUrl: '../',
+    baseUrl: 'js',
     paths: {
         jquery: 'libs/jquery/jquery-3.1.1',
-        bootstrap: 'libs/bootstrap/bootstrap.min',
-        underscore: 'libs/underscore/underscore.min',
+        underscore: 'libs/underscore/underscore-min',
         backbone: 'libs/backbone/backbone-min',
-        text: 'libs/require/text'
+        bootstrap: 'libs/bootstrap/bootstrap.min'
     }
 });
 
@@ -18,7 +17,7 @@ require(['views/Comments'], function (AppView) {
         contentType: "application/json",
         success: function (data) {
             for (var a in data) {
-                var dateStamp = getDateStamp(+data[a].time);
+                //var dateStamp = getDateStamp(+data[a].time);
                 var dateStamp = moment(+data.time).fromNow();
                 //console.log(dateStamp);
                 var i = new Comment({

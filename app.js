@@ -91,7 +91,3 @@ app.post('/index', jsonParser, function (request, response) {
 });
 
 app.listen(4000);
-
-/**
- * Created by Богдан on 28.04.2017.
- */

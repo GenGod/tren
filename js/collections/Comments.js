@@ -1,4 +1,4 @@
-define(['underscore', 'backbone', 'models/Comment'], function (_, Backbone, Store, Todo) {
+define(['underscore', 'backbone', 'models/Comment'], function (_, Backbone, Comment) {
     var CommentsCollection = Backbone.Collection.extend({
         model: Comment
     });

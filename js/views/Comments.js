@@ -1,7 +1,4 @@
-/**
- * Created by Богдан on 28.04.2017.
- */
-define(['jquery', 'underscore', 'backbone', 'text!templates/todos.html', 'common'], function ($, _, backbone, todosTemplate, Common) {
+define(['underscore', 'backbone'], function (_, Backbone) {
     var CommentsView = Backbone.View.extend({
         render: function () {
             this.collection.each(function (comment) {
